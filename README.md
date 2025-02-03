@@ -16,4 +16,4 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses json server. To run it run `npx json-server db.json`
+This project uses json server. To run it run `npx json-server db.json -p 3030`

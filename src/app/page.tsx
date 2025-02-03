@@ -2,7 +2,7 @@ import { User } from "@/@types/user";
 import HomePage from "@/components/page/home";
 
 export default async function Home() {
-  const response = await fetch("http://localhost:3000/users", {
+  const response = await fetch("http://localhost:3030/users", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
