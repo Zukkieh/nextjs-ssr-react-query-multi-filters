@@ -28,10 +28,8 @@ const fetchUser = async (gender: Option[], status: Option[]): Promise<User[]> =>
 export default function useUserFilter(initialData: User[] = []) {
   const [selectedGender, setSelectedGender] = useState<Option[]>([]);
   const [selectedStatus, setSelectedStatus] = useState<Option[]>([]);
-  const [enableQuery, setEnableQuery] = useState(false);
 
   const setFilter = (gender: Option[], status: Option[]) => {
-    setEnableQuery(true);
     setSelectedGender(gender);
     setSelectedStatus(status);
   }
@@ -47,7 +45,6 @@ export default function useUserFilter(initialData: User[] = []) {
       queryFn: () => fetchUser(selectedGender, selectedStatus),
       refetchOnWindowFocus: false,
       placeholderData: keepPreviousData,
-      enabled: enableQuery,
     }
   );
 
